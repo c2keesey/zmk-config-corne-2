@@ -320,15 +320,22 @@ ZMK_MACRO(minimize, bindings = <&kp LG(M)>; wait-ms = <0>; tap-ms = <5>;)
       ZMK_LAYER(name, LT RT LM RM LB RB LH RH)
 #endif
 
+# define SFT_RET &kp LS(RETURN)
+# define SLEEP &kp RC(RG(Q))
+# define MUTE &kp (LG(D))
+# define TOG_NAV &tog NAV
+# define SAVE_SONG &kp LG(LS(LA(R)))
+
+
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    XXX      &kp Q         &kp W         &kp E         &kp R         &kp T            &kp Y         &kp U         &kp I         &kp O         &kp P           XXX
+    SLEEP    &kp Q         &kp W         &kp E         &kp R         &kp T            &kp Y         &kp U         &kp I         &kp O         &kp P           XXX
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    XXX      &hml LCTRL A  &hml LALT S   &hml LGUI D   &hml LSHFT F  &kp G            &kp H         &hmr RSHFT J  &hmr RGUI K   &hmr RALT L   &hmr RCTRL SQT  XXX
+  SFT_RET    &hml LCTRL A  &hml LALT S   &hml LGUI D   &hml LSHFT F  &kp G            &kp H         &hmr RSHFT J  &hmr RGUI K   &hmr RALT L   &hmr RCTRL SQT  TOG_NAV
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    XXX      &kp Z         &kp X         &kp C         &kp V         &kp B            &kp N         &kp M         &comma_morph  &dot_morph    &kp FSLH        XXX
+    MUTE     &kp Z         &kp X         &kp C         &kp V         &kp B            &kp N         &kp M         &comma_morph  &dot_morph    &kp FSLH       SAVE_SONG
 //╰──────╯ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ╰──────╯
-                                         &lt FN ESC    &lt_spc NAV 0 &lt SYM TAB      &lt SYS RETURN &lt NUM BSPC    &smart_shft
+                                         &lt FN ESC    &lt_spc NAV 0 &lt SYM TAB      &lt SYS RETURN &lt NUM BSPC &smart_shft
 //                                     ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
 )
 
