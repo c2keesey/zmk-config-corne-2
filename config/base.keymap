@@ -281,7 +281,7 @@ ZMK_MACRO(minimize, bindings = <&kp LG(M)>; wait-ms = <0>; tap-ms = <5>;)
 #define FORWARD   &kp LG(RBKT)            // Forward
 
 // Special macros for system shortcuts
-#define WHISPER   &kp LG(LC(LA(N1)))
+#define WHISPER   &kp LC(LA(N1))
 #define M_1       &kp LG(LC(LA(N2)))
 #define M_2       &kp LG(LC(LA(N3)))
 #define M_3       &kp LG(LC(LA(N4)))
